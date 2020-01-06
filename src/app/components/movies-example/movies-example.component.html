@@ -1,0 +1,9 @@
+<div class="jumbotron">
+    <h1 class="display-4">Movies</h1>
+</div>
+
+<div class="row p-5">
+    <div class="col-2 mt-4" *ngFor="let show of shows">
+        <app-show-card [show]="show"> </app-show-card>
+    </div>
+</div>
