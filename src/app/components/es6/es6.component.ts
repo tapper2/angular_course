@@ -6,6 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./es6.component.scss']
 })
 export class Es6Component implements OnInit {
+  nums: Array<number> = [23,5,7,8]
+  str = "abcd"
+
+  user:object = {
+      name:this.str,
+      mail:"s@gmail.com",
+      nums:[1,2,3,4]
+  }
 
   shows: Array<object> = [
     {
@@ -60,11 +68,12 @@ export class Es6Component implements OnInit {
 
   constructor() {
     // this.ES6_Var_Let();
-    // this.ES6_ForLoop();
+    //this.ES6_ForLoop();
     // this.ES6_Console()
     // this.ES6_START_END_WIDTH();
     // this.ES6_MAP();
-    // this.ES6_Find();
+     this.ES6_Find();
+    console.log(this.shows[0]['image']['medium'])
   }
 
 
@@ -73,6 +82,7 @@ export class Es6Component implements OnInit {
   }
 
   ES6_Var_Let() {
+
     if (x == 1) {
       console.log("apple");
     } else {
@@ -118,8 +128,8 @@ export class Es6Component implements OnInit {
   ES6_MAP = () => {
     let arr: Array<number> = [2, 4, 6, 8, 10];
 
-    arr.map(item => {
-      console.log(item)
+    let arr1 = arr.map(temp => {
+      console.log(temp)
     })
 
     this.shows.map(show => {
@@ -138,6 +148,6 @@ export class Es6Component implements OnInit {
       return show['id'] == 19
     })
 
-    console.log("FIND : ", show, showIndex)
+    console.log("FIND : ", showIndex)
   }
 }

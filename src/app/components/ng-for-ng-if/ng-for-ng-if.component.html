@@ -46,3 +46,11 @@
 <div [ngClass]="BoxColor === 'red' ? 'box red': 'box blue'">
 
 </div>
+
+
+<div class="row">
+    <div *ngFor="let city of cities" class="col-12 col-md-6 col-sm-3 ">
+          <div class="mt-2 box red" *ngIf="city == 'Haifa'">{{city}}</div>
+          <div class="mt-2 box blue" *ngIf="city == 'Haifa'">{{city}}</div>
+    </div>
+</div>

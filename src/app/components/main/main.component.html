@@ -1,3 +1,46 @@
-<div class="jumbotron">
-    <h1 class="display-4">Main component</h1>
+<!-- <div class="row p-5" >
+    <div class="col-10 offset-1 col-md-4 offset-md-1 green box" *ngIf="shows[0]">
+            <div class="title">מה אוכלים במג'דל שמס?</div>
+            <div class="desc">החרמון פתוח: נוסעים לצפון הרחוק לראות קצת שלג? בטוח תהיו רעבים בדרך - איפה תמצאו שקשוקת שום, איפה החומוס הכי טוב, מי יעשה לכם משלוח של המבורגר לצימר, איפה תאכלו ארוחת מלכים ב-100 שקל לסועד, ואיפה עוצרים לכנאפה? כל המקומות הכי טעימים במג'דל שמס, הכפר הדרוזי למרגלות החרמון</div>
+    </div>
+
+    <div class="col-10 offset-1 col-md-4 offset-md-1 red mt-3 box" *ngIf="shows[1]">
+            <div class="title">מה אוכלים במג'דל שמס?</div>
+            <div class="desc">החרמון פתוח: נוסעים לצפון הרחוק לראות קצת שלג? בטוח תהיו רעבים בדרך - איפה תמצאו שקשוקת שום, איפה החומוס הכי טוב, מי יעשה לכם משלוח של המבורגר לצימר, איפה תאכלו ארוחת מלכים ב-100 שקל לסועד, ואיפה עוצרים לכנאפה? כל המקומות הכי טעימים במג'דל שמס, הכפר הדרוזי למרגלות החרמון</div>
+    </div>
 </div>
+
+
+<div class="row p-5">
+        <div class="col-10 offset-1 col-md-4 offset-md-1 blue box" *ngIf="shows[2]">
+                <div class="title">מה אוכלים במג'דל שמס?</div>
+                <div class="desc">החרמון פתוח: נוסעים לצפון הרחוק לראות קצת שלג? בטוח תהיו רעבים בדרך - איפה תמצאו שקשוקת שום, איפה החומוס הכי טוב, מי יעשה לכם משלוח של המבורגר לצימר, איפה תאכלו ארוחת מלכים ב-100 שקל לסועד, ואיפה עוצרים לכנאפה? כל המקומות הכי טעימים במג'דל שמס, הכפר הדרוזי למרגלות החרמון</div>
+        </div>
+    
+        <div class="col-10 offset-1 col-md-4 offset-md-1 mt-3 orange box" *ngIf="shows[3]"> 
+                <div class="title">מה אוכלים במג'דל שמס?</div>
+                <div class="desc">החרמון פתוח: נוסעים לצפון הרחוק לראות קצת שלג? בטוח תהיו רעבים בדרך - איפה תמצאו שקשוקת שום, איפה החומוס הכי טוב, מי יעשה לכם משלוח של המבורגר לצימר, איפה תאכלו ארוחת מלכים ב-100 שקל לסועד, ואיפה עוצרים לכנאפה? כל המקומות הכי טעימים במג'דל שמס, הכפר הדרוזי למרגלות החרמון</div>
+        </div>
+</div>
+
+<div class="row">
+   <div class="col-6">
+       <button class="ml-1" (click)="showBox(0)">box1</button>
+       <button class="ml-1" (click)="showBox(1)">box2</button>
+       <button class="ml-1" (click)="showBox(2)">box3</button>
+       <button class="ml-1" (click)="showBox(3)">box4</button>
+   </div>
+</div>
+
+
+<div *ngFor="let num of nums">
+    <div>This num is : {{num}}</div>
+</div> -->
+
+
+
+<!-- <app-a [numsArray]="nums"></app-a>
+<app-b [numsArray]="nums"></app-b> -->
+
+<app-a (changeNum)="changeNumber($event)"></app-a>
+<app-b [num]="num"></app-b>

@@ -6,16 +6,12 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 
-export class ApiService implements OnInit {
+export class ApiService {
 
   public loading = false;
   public baseURL = "http://www.omdbapi.com/?apikey=d77eb704&"
   constructor(private http: HttpClient) { }
 
-
-  ngOnInit() {
-
-  }
 
   getAllMovies(url) {
     return new Promise(async (resolve, reject) => {
@@ -26,5 +22,9 @@ export class ApiService implements OnInit {
       } finally {
       }
     });
+  }
+
+  sum(a,b){
+    return a+b;
   }
 }

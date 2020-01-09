@@ -11,7 +11,12 @@ import { ShowCardComponent } from './components/show-card/show-card.component';
 import { OmdbComponent } from './components/omdb/omdb.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NgxSpinnerModule } from "ngx-spinner";
-
+import { BootstrapComponent } from './components/bootstrap/bootstrap.component';
+import { MovieCardComponent } from './components/movie-card/movie-card.component';
+import { AComponent } from './components/a/a.component';
+import { BComponent } from './components/b/b.component';
+import { MovieComponentComponent } from './components/movie-component/movie-component.component';
+import {FormsModule}   from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,13 +26,19 @@ import { NgxSpinnerModule } from "ngx-spinner";
     MainComponent,
     MoviesExampleComponent,
     ShowCardComponent,
-    OmdbComponent
+    OmdbComponent,
+    BootstrapComponent,
+    MovieCardComponent,
+    AComponent,
+    BComponent,
+    MovieComponentComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    NgxSpinnerModule
+    NgxSpinnerModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
